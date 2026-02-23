@@ -43,11 +43,13 @@ app.post("/login",async (req,res)=>
     const ckPassword=await bcrypt.compare(password,user.password);
 
     if(ckPassword) 
-        res.json({message:"login successful",token:jwt.sign(user,secretKey,{expiresIn:"1h"})});
+        res.json({message:" successful",token:jwt.sign(user,secretKey,{expiresIn:"1h"})});
     else
         res.status(401).json({message:"invalid credentials"});
 });
-
-app.get("/users",middleware, (req, res) => {
+app.get("/", (req, res) => {
+    res.json({message: "On Home Page"});
+});
+app.get("/users", (req, res) => {
     res.json(users);
 });
