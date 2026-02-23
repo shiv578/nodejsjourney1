@@ -12,7 +12,7 @@ app.use(express.json());
 const users=[];
 app.post("/signup",(req,res)=>
 {
-    const body=req.body;
+       const body=req.body;
     const hasPassword=bcrypt.hashSync(body.password,10);
     body.password=hasPassword;
     users.push(body);
