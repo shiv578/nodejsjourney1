@@ -9,7 +9,7 @@ app.listen(8080,()=>
     console.log("server is starting");
 });
 const user={
-          name:"john",
+            name:"john",
     email:"john@example.com",
     role:"student"
 }
