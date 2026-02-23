@@ -1,7 +1,14 @@
-import express from "express"
-import jwt from "jsonwebtoken"
-const app = express()
-const SECRET = "lpu"
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSm9obiIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc3MTgzNDE5NiwiZXhwIjoxNzcxODM3Nzk2fQ.L6T8-m9HL15h6MRwgqh5zQV1havse15E5Xcq5R8Kukg"
-const user = jwt.verify(token,SECRET)
-console.log(user)
+
+
+import express from 'express';
+import jwt from 'jsonwebtoken';
+const app = express();
+const secretKey = "mysecretkey";
+app.listen(8080,()=>
+{
+    console.log("server is starting");
+});
+const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiam9obiIsImVtYWlsIjoiam9obkBleGFtcGxlLmNvbSIsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNzcxODMzODY1LCJleHAiOjE3NzE4Mzc0NjV9.HGZW6VcXKfPmXAl_XyGpb-twb6ORpozC-0Oe9dVWH4U"
+const user=jwt.verify(token,secretKey);
+console.log("Decoded user data:", user);
+app.use(express.json());
