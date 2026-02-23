@@ -5,4 +5,4 @@ const users = [
   { id: 3, name: "vivaan", email: "vivaan@mail.com", role: "Student" },
 ];
 
-export {users}
+export {users}  
