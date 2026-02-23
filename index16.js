@@ -11,7 +11,10 @@ app.listen(8080, () => {
 const middleware = (req, res, next) => {
   const authHeader = req.headers.authorization;
   if (!authHeader)
-    return res.status(401).json({ message: "Authorization header missing" });
+
+
+    
+        return res.status(401).json({ message: "Authorization header missing" });
   const token = authHeader.split(" ")[1];
   try {
     jwt.verify(token, secretKey); v  
