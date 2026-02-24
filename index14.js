@@ -10,8 +10,8 @@ app.listen(8080,()=>
 });
 const user={
             name:"john",
-    email:"john@example.com",
-    role:"student"
+                    email:"john@example.com",
+           role:"student"
 }
 const token=jwt.sign(user,secretKey,{expiresIn:"1h"});
 console.log("Generated JWT:", token);
