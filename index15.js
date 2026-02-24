@@ -13,3 +13,4 @@ const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiam9obiIsImVtYWlsIj
 const user=jwt.verify(token,secretKey);
 console.log("Decoded user data:", user);
 app.use(express.json());
+//jwe token is ome thing
