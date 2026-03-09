@@ -7,7 +7,7 @@ app.listen(8080);
 // })
 
 // app.get("name/:name",(req,res)=>{
-//     res.send("Hello "+ req.params.name);                 http://localhost:8080/name/shubh
+//     res.send("Hello "+ req.params.name);                  http://localhost:8080/name/shubh
 // })
 
 
